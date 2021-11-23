@@ -1,5 +1,5 @@
 class ArticlesController < ApplicationController
-  before_action :set_article, only: [:show, :update, :destroy]
+  before_action :current_user, only: [:create, :update]
 
   # GET /articles
   def index
